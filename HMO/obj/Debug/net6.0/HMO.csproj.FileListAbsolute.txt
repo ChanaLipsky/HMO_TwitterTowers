@@ -1,0 +1,7 @@
+D:\Users\User\Desktop\git\HMO\HMO\HMO\obj\Debug\net6.0\HMO.csproj.AssemblyReference.cache
+D:\Users\User\Desktop\git\HMO\HMO\HMO\obj\Debug\net6.0\HMO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\User\Desktop\git\HMO\HMO\HMO\obj\Debug\net6.0\HMO.AssemblyInfoInputs.cache
+D:\Users\User\Desktop\git\HMO\HMO\HMO\obj\Debug\net6.0\HMO.AssemblyInfo.cs
+D:\Users\User\Desktop\git\HMO\HMO\HMO\obj\Debug\net6.0\HMO.csproj.CoreCompileInputs.cache
+D:\Users\User\Desktop\git\HMO\HMO\HMO\obj\Debug\net6.0\HMO.MvcApplicationPartsAssemblyInfo.cs
+D:\Users\User\Desktop\git\HMO\HMO\HMO\obj\Debug\net6.0\HMO.MvcApplicationPartsAssemblyInfo.cache
