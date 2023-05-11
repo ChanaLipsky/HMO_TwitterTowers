@@ -9,8 +9,8 @@ namespace Dto
     public class CoronaVaccineDto
     {
         public CoronaVaccineDto() { }
+        public int Id { get; set; }
         public string IdCard { get; set; }
-        public string Id { get; set; }
         public DateTime Date { get; set; }
         public string ManuFacturer { get; set; }
     }

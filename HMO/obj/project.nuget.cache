@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ijGR4AvHi6d14ajzSCPg7WxsOVdpFIuaBurx5b9x0nwUXPb6cyD/MTtwggINYQwPqbwMWikBeNLL1w4/yH+XdQ==",
+  "dgSpecHash": "An0DXxE9W+z1iynOQebLNyO4NWcRDe6ZR5uFGV1nzhhdC2IbkwpDgDpMEwe6d/3Uh/rOUfEaoc2bZz3XYgomlA==",
   "success": true,
   "projectFilePath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\HMO\\HMO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",

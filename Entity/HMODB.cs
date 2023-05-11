@@ -2,11 +2,6 @@
 using Entity.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entities
 {
@@ -15,6 +10,7 @@ namespace Entities
         public HMODB()
         {
         }
+
         public HMODB(DbContextOptions<HMODB> options)
             : base(options)
         {
@@ -23,11 +19,13 @@ namespace Entities
 
         public virtual DbSet<Member> Members { get; set; }
 
+        public virtual DbSet<CoronaVaccine> CoronaVaccines { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=HMODB");
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
@@ -36,32 +34,29 @@ namespace Entities
             {
                 entity.ToTable("member");
 
+                entity.HasKey(e => e.Id);
+
                 entity.Property(e => e.Id)
-                    .HasColumnName("Id")
-                    //איך כותבים שיהיה מס' יחודי רץ
-                    ;
+                    .HasColumnName("Id");
 
                 entity.Property(e => e.IdCard)
                     .HasColumnName("IdCard")
                     .IsRequired()
-                    .HasMaxLength(9)
-                    //.IsFixedLength(9)-אי עושים שיהיה לפחות 9 ספרות
-                    ;
+                    .HasMaxLength(9);
 
-                entity.Property(e => e.FirstName)                    
+                entity.Property(e => e.FirstName)
                     .HasColumnName("FirstName")
                     .IsRequired()
-                    .HasMaxLength(20);
+                    .HasMaxLength(30);
 
                 entity.Property(e => e.LastName)
                     .HasColumnName("LastName")
                     .IsRequired()
-                    .HasMaxLength(20);
+                    .HasMaxLength(30);
 
+               
                 entity.Property(e => e.Email)
-                    .HasColumnName("Email")
-                    //איך עושים שיכתב פה דוקא מייל
-                    ;
+                    .HasColumnName("Email");
 
                 entity.Property(e => e.City)
                     .HasColumnName("City")
@@ -72,13 +67,18 @@ namespace Entities
 
                 entity.Property(e => e.StreetNumber)
                     .HasColumnName("StreetNumber")
-                    .HasMaxLength(3); 
+                    .HasMaxLength(3);
 
                 entity.Property(e => e.Phone)
-                    .HasColumnName("Phone");
+                    .HasColumnName("Phone")
+                    .HasMaxLength(10);
 
                 entity.Property(e => e.CellPhone)
-                    .HasColumnName("CellPhone");
+                    .HasColumnName("CellPhone")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Picture)
+                    .HasColumnName("Picture");
 
                 entity.Property(e => e.PositiveResultDate)
                     .HasColumnName("PositiveResultDate")
@@ -94,10 +94,12 @@ namespace Entities
             {
                 entity.ToTable("coronaVaccine");
 
+                entity.HasKey(e => e.Id);
+
                 entity.Property(e => e.Id)
                     .HasColumnName("id");
 
-                entity.Property(e => e.Date)   
+                entity.Property(e => e.Date)
                     .HasColumnName("Date")
                     .IsRequired();
 
@@ -105,12 +107,20 @@ namespace Entities
                     .HasColumnName("ManuFacturer")
                     .IsRequired();
 
+                entity.Property(e => e.IdCard)
+                    .HasColumnName("IdCard")
+                    .IsRequired()
+                    .HasMaxLength(9);
+
+                entity.HasOne(e => e.Member)
+                     .WithMany(e => e.CoronaVaccinesList)
+                     .HasForeignKey(e => e.IdCard) // use IdCard as foreign key
+                     .HasPrincipalKey(e => e.IdCard); // specify the principal key
             });
 
             OnModelCreatingPartial(modelBuilder);
         }
+
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
-
 }
-

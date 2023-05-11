@@ -11,8 +11,8 @@ namespace Dal
 
     public class MemberDal : IMemberDal
     {
-        public DB HMODB;
-        public MemberDal(DB HMODB)
+        public HMODB HMODB;
+        public MemberDal(HMODB HMODB)
         {
             this.HMODB = HMODB;
         }
@@ -28,10 +28,26 @@ namespace Dal
             return HMODB.Members.ToList();
         }
 
-        public Member GetMemberById(int memberId)
+        public Member? GetMemberById(int memberId)
         {
             return HMODB.Members.FirstOrDefault(m => m.Id == memberId);
         }
+        public Member? GetMemberByIdCard(string memberIdCard)
+        {
+            if (IsMemberByIdCard(memberIdCard)) {
+                return HMODB.Members.ToList().FirstOrDefault(m=>m.IdCard.Equals(memberIdCard));
+            }
+            return null;
+        }
 
+        public int GetMemberVaccineCount(string memberIdCard)
+        {
+            return 0;   
+        }
+
+        public bool IsMemberByIdCard(string MemberIdCard)
+        {
+            return this.HMODB.Members.FirstOrDefault(m=>m.IdCard.Equals(MemberIdCard))!=null;
+        }
     }
 }

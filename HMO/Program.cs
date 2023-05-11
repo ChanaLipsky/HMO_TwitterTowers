@@ -1,5 +1,6 @@
 using AutoMapper;
 using Bll;
+using Dal;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,9 +12,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped(typeof(IMemberDal), typeof(MemberDal));
+builder.Services.AddScoped(typeof(ICoronaVaccineDal), typeof(CoronaVaccineDal));
+builder.Services.AddScoped(typeof(IMemberBll), typeof(MemberBll));
+builder.Services.AddScoped(typeof(ICoronaVaccineBll), typeof(CoronaVaccineBll));
 
 IServiceCollection serviceCollection = builder.Services.AddDbContext<HMODB>(options =>
     options.UseSqlite("Data Source=HMODB"));
+
 var mapperConfig = new MapperConfiguration(mc =>
 {
     mc.AddProfile(new AutoMapperProfile());
@@ -30,6 +36,7 @@ builder.Services.AddCors(options =>
                .AllowAnyMethod();
     });
 });
+
 var app = builder.Build();
 app.UseCors("MyPolicy");
 // Configure the HTTP request pipeline.

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace projectHmo.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/memberController")]
     [ApiController]
     public class MemberController : ControllerBase
 
@@ -21,21 +21,26 @@ namespace projectHmo.Controllers
         [HttpGet]
         public List<MemberDto> GetAllMembers()
         {
-            return this.MemberBll.GetAllMembers();
+            return this.MemberBll.GetMembers();
         }
 
         // GET api/<MemberController>/5
         [HttpGet("{id}")]
         public MemberDto Get(int id)
         {
-            return this.MemberBll.GetById(id);
+            return this.MemberBll.GetMember(id);
+        }
+        [HttpGet("IdCard/{IdCard}")]
+        public MemberDto GetMemberByIdCard(string IdCard)
+        {
+            return this.MemberBll.GetMemberByIdCard(IdCard);
         }
 
         // POST api/<MemberController>
         [HttpPost]
         public void Post([FromBody] MemberDto value)
         {
-            this.MemberBll.Add(value);
+            this.MemberBll.AddMember(value);
         }
 
     }

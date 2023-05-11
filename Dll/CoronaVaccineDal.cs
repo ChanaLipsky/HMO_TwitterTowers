@@ -1,4 +1,5 @@
-﻿using Entity.models;
+﻿using Entities;
+using Entity.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Dal
 {
-    public class CoronaVaccineDal
+    public class CoronaVaccineDal:ICoronaVaccineDal
     {
-        public DB HMODB;
-        public CoronaVaccineDal(DB HMODB)
+        public HMODB HMODB;
+        public CoronaVaccineDal(HMODB HMODB)
         {
             this.HMODB = HMODB;
         }
@@ -26,5 +27,19 @@ namespace Dal
             return HMODB.CoronaVaccines.ToList();
         }
 
+        public List<CoronaVaccine> GetCoronaVaccinesByDate(DateTime Date)
+        {
+            return this.HMODB.CoronaVaccines.Where(x => x.Date == Date).ToList();
+        }
+
+        public List<CoronaVaccine> GetCoronaVaccinesByIdCard(string IdCard)
+        {
+            return this.HMODB.CoronaVaccines.Where(x=>x.IdCard== IdCard).ToList();
+        }
+
+        public List<CoronaVaccine> GetCoronaVaccinesByManuFacturer(string ManuFacturer)
+        {
+            return this.HMODB.CoronaVaccines.Where(x => x.ManuFacturer == ManuFacturer).ToList();
+        }
     }
 }

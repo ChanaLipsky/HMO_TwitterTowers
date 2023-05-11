@@ -1,0 +1,15 @@
+D:\Users\User\Desktop\git\HMO\HMO\Dll\bin\Debug\net6.0\Dal.deps.json
+D:\Users\User\Desktop\git\HMO\HMO\Dll\bin\Debug\net6.0\Dal.dll
+D:\Users\User\Desktop\git\HMO\HMO\Dll\bin\Debug\net6.0\Dal.pdb
+D:\Users\User\Desktop\git\HMO\HMO\Dll\bin\Debug\net6.0\Entity.dll
+D:\Users\User\Desktop\git\HMO\HMO\Dll\bin\Debug\net6.0\Entity.pdb
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\Dal.csproj.AssemblyReference.cache
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\Dal.AssemblyInfoInputs.cache
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\Dal.AssemblyInfo.cs
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\Dal.csproj.CoreCompileInputs.cache
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\Dal.csproj.CopyComplete
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\Dal.dll
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\refint\Dal.dll
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\Dal.pdb
+D:\Users\User\Desktop\git\HMO\HMO\Dll\obj\Debug\net6.0\ref\Dal.dll

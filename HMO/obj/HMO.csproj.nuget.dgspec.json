@@ -4,6 +4,77 @@
     "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\HMO\\HMO.csproj": {}
   },
   "projects": {
+    "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Bll\\Bll.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Bll\\Bll.csproj",
+        "projectName": "Bll",
+        "projectPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Bll\\Bll.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Bll\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dll\\Dal.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dll\\Dal.csproj"
+              },
+              "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dto\\Dto.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dto\\Dto.csproj"
+              },
+              "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Entity\\Entity.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Entity\\Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dll\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -98,6 +169,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -209,14 +286,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Bll\\Bll.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Bll\\Bll.csproj"
+              },
               "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dll\\Dal.csproj": {
                 "projectPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dll\\Dal.csproj"
               },
               "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dto\\Dto.csproj": {
                 "projectPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Dto\\Dto.csproj"
-              },
-              "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Entity\\Entity.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\git\\HMO\\HMO\\Entity\\Entity.csproj"
               }
             }
           }

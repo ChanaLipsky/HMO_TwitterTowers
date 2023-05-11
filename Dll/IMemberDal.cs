@@ -10,7 +10,10 @@ namespace Dal
     public interface IMemberDal
     {
         public List<Member> GetAllMembers();
-        public void AddMember (Member member);
-        public Member GetMemberById(int Id);
+        public void AddMember(Member member);
+        public Member? GetMemberById(int Id);
+        public Member? GetMemberByIdCard(string memberIdCard);
+        public int GetMemberVaccineCount(string memberIdCard);
+        public bool IsMemberByIdCard(string MemberIdCard);
     }
 }
